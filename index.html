@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart & Educational Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="main-heading">Smart & Educational Calculator</h1>
+
+  <div class="main-container">
+    <!-- Left Side: Calculator -->
+    <div class="calculator-section">
+      <div class="calculator">
+        <div class="display-area">
+          <div id="expressionDisplay"></div>
+          <input type="text" id="display" disabled placeholder="0" />
+        </div>
+
+        <div class="buttons">
+          <button class="btn function">C</button>
+          <button class="btn function">DEL</button>
+          <button class="btn function">(</button>
+          <button class="btn function">)</button>
+
+          <button class="btn">7</button>
+          <button class="btn">8</button>
+          <button class="btn">9</button>
+          <button class="btn operator">/</button>
+
+          <button class="btn">4</button>
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn operator">*</button>
+
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn operator">-</button>
+
+          <button class="btn">0</button>
+          <button class="btn">.</button> <!-- Decimal button -->
+          <button class="btn function">√</button>
+          <button class="btn operator">+</button>
+
+          <button class="btn equal" id="enter">ENTER</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Sidebar -->
+    <div class="sidebar">
+      <div class="tabs">
+        <button class="tab-button active" data-target="steps">🧾 Steps</button>
+        <button class="tab-button" data-target="history">📜 History</button>
+        <button class="tab-button" data-target="theme">🎨 Theme</button>
+      </div>
+
+      <div class="tab-content active-content" id="steps">
+        <h3>Calculation Steps</h3>
+        <div id="stepsBox" class="steps-box">No steps yet.</div>
+      </div>
+
+      <div class="tab-content hidden" id="history">
+        <h3>Calculation History</h3>
+        <ul id="historyList"></ul>
+      </div>
+
+      <div class="tab-content hidden" id="theme">
+        <h3>Theme Settings</h3>
+        <button id="themeToggle">🌗 Toggle Dark/Light</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
